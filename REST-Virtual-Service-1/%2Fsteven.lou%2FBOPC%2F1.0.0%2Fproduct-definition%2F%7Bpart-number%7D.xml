@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:restMockAction name="/steven.lou/BOPC/1.0.0/product-definition/{part-number}" method="GET" resourcePath="/steven.lou/BOPC/1.0.0/product-definition/{part-number}" id="9885f9cf-995f-4100-bc06-6c85422cba85" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="9885f9cf-995f-4100-bc06-6c85422cba85fileName">%2Fsteven.lou%2FBOPC%2F1.0.0%2Fproduct-definition%2F%7Bpart-number%7D</con:setting></con:settings><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:routeScript/><con:response name="Response 1" id="b15e6d2d-9f06-4e69-9ce7-92eae093244d" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
-  "constructType" : "Hello",
+  "constructType" : "Test Response",
   "roamingAllowance" : {
     "voice" : {
       "unit" : "unit",
