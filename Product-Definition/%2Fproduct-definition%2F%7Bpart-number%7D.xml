@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/product-definition/{part-number}" path="/product-definition/{part-number}" id="03499026-a2a1-48c0-a336-8ec6da40c686" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="03499026-a2a1-48c0-a336-8ec6da40c686fileName">%2Fproduct-definition%2F%7Bpart-number%7D</con:setting></con:settings><con:parameters><con:parameter required="true"><con:name>part-number</con:name><con:style>TEMPLATE</con:style><con:description>ID of pet to return</con:description></con:parameter></con:parameters><con:method name="getProductById" id="a477acfa-f1f4-4e8a-92ef-2e9f6bda30d9" method="GET"><con:description>Returns a single product
+Find product by ID</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:sampleContent>{
+  "constructType" : "MOC",
+  "roamingAllowance" : {
+    "voice" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "mms" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "data" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "sms" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "type" : "type",
+    "excessTreatment" : "excessTreatment"
+  },
+  "marketStartDate" : "1478774714195",
+  "displayName" : "Mobile Plan",
+  "contractType" : "MRO",
+  "tandcLink" : "https://www.telstra.com",
+  "technologyType" : "FTTP",
+  "description" : "Mobile Plan",
+  "type" : "PLAN",
+  "paymentType" : "MAIN_PLAN",
+  "offer" : "MAIN_PLAN",
+  "feature" : {
+    "sendInOrderFlag" : true,
+    "shareable" : true,
+    "deliveryAddressRequired" : true,
+    "minQuantity" : 6,
+    "maxQuantity" : 0,
+    "appointmentRequired" : true,
+    "creditAssessmentRequired" : true,
+    "serviceQualificationRequired" : true,
+    "shapeable" : true,
+    "defaultQuantity" : 1,
+    "serviceAccountRequired" : true
+  },
+  "orderLevel" : "MOLI",
+  "array" : [ "array", "array" ],
+  "price" : {
+    "installPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "discountInstallPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "totalPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "promotionDiscountPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "equipmentPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "cancellationFee" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "discountTotalPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "postPromotionDiscountPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "discountEquipmentPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    }
+  },
+  "id" : "id",
+  "marketEndDate" : "1478774714195",
+  "domesticAllowance" : {
+    "voice" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "mms" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "data" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "sms" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "type" : "type",
+    "excessTreatment" : "excessTreatment"
+  },
+  "visibility" : "HIDDEN",
+  "channels" : "ONLNIE",
+  "domain" : "MOBILE",
+  "rootProductId" : "rootProductId",
+  "name" : "Mobile Plan",
+  "subType" : "MAIN_PLAN",
+  "category" : "POSTPAID_MOBILE",
+  "status" : "available"
+}</con:sampleContent></con:representation><con:request name="Request 1" id="48cbf13d-f36a-45d0-856c-6625ee83b757" mediaType="application/json"><con:settings/><con:endpoint>http://virtserver.swaggerhub.com</con:endpoint><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:request></con:method></con:resource>

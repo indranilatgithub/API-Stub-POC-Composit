@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/steven.lou/BOPC/1.0.0/product-definition/batch" method="POST" resourcePath="/steven.lou/BOPC/1.0.0/product-definition/batch" id="2f21c05f-86c4-4778-8914-fde3e3935764" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="2f21c05f-86c4-4778-8914-fde3e3935764fileName">%2Fsteven.lou%2FBOPC%2F1.0.0%2Fproduct-definition%2Fbatch</con:setting></con:settings><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:routeScript/><con:response name="Response 1" id="4c35b7c5-a1e8-4c2d-9a1f-36ba4f1e6b62" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "constructType" : "MOC",
+  "roamingAllowance" : {
+    "voice" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "mms" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "data" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "sms" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "type" : "type",
+    "excessTreatment" : "excessTreatment"
+  },
+  "marketStartDate" : "1478774714195",
+  "displayName" : "Mobile Plan",
+  "contractType" : "MRO",
+  "tandcLink" : "https://www.telstra.com",
+  "technologyType" : "FTTP",
+  "description" : "Mobile Plan",
+  "type" : "PLAN",
+  "paymentType" : "MAIN_PLAN",
+  "offer" : "MAIN_PLAN",
+  "feature" : {
+    "sendInOrderFlag" : true,
+    "shareable" : true,
+    "deliveryAddressRequired" : true,
+    "minQuantity" : 6,
+    "maxQuantity" : 0,
+    "appointmentRequired" : true,
+    "creditAssessmentRequired" : true,
+    "serviceQualificationRequired" : true,
+    "shapeable" : true,
+    "defaultQuantity" : 1,
+    "serviceAccountRequired" : true
+  },
+  "orderLevel" : "MOLI",
+  "array" : [ "array", "array" ],
+  "price" : {
+    "installPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "discountInstallPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "totalPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "promotionDiscountPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "equipmentPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "cancellationFee" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "discountTotalPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "postPromotionDiscountPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    },
+    "discountEquipmentPrice" : {
+      "unit" : "unit",
+      "price" : 5,
+      "frequency" : "frequency"
+    }
+  },
+  "id" : "id",
+  "marketEndDate" : "1478774714195",
+  "domesticAllowance" : {
+    "voice" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "mms" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "data" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "sms" : {
+      "unit" : "unit",
+      "allowance" : 5,
+      "type" : "type"
+    },
+    "type" : "type",
+    "excessTreatment" : "excessTreatment"
+  },
+  "visibility" : "HIDDEN",
+  "channels" : "ONLNIE",
+  "domain" : "MOBILE",
+  "rootProductId" : "rootProductId",
+  "name" : "Mobile Plan",
+  "subType" : "MAIN_PLAN",
+  "category" : "POSTPAID_MOBILE",
+  "status" : "available"
+}</con:responseContent></con:response></con:restMockAction>

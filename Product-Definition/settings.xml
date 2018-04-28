@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="a8d41023-f5f5-42fb-b160-9f00379437dc" name="Product Definition" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" definitionUrl="D:\Telstra\bopc-swagger.json" basePath="/steven.lou/BOPC/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:description>This is a sample BOPC server.  You can find 
+out more about Swagger at 
+[http://swagger.io](http://swagger.io) or on 
+[irc.freenode.net, #swagger](http://swagger.io/irc/).
+</con:description><con:settings><con:setting id="a8d41023-f5f5-42fb-b160-9f00379437dcfileName">Product-Definition</con:setting></con:settings><con:definitionCache type="TEXT" rootPart="file:/D:/Telstra/bopc-swagger.json"><con:part><con:url>file:/D:/Telstra/bopc-swagger.json</con:url><con:content>{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is a sample BOPC server.  You can find \nout more about Swagger at \n[http://swagger.io](http://swagger.io) or on \n[irc.freenode.net, #swagger](http://swagger.io/irc/).\n",
+    "version" : "1.0.0",
+    "title" : "Product Definition",
+    "termsOfService" : "http://swagger.io/terms/",
+    "contact" : {
+      "email" : "apiteam@swagger.io"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/steven.lou/BOPC/1.0.0",
+  "tags" : [ {
+    "name" : "product",
+    "description" : "Static definitions about product",
+    "externalDocs" : {
+      "description" : "Find out more",
+      "url" : "http://swagger.io"
+    }
+  } ],
+  "schemes" : [ "https", "http" ],
+  "paths" : {
+    "/product-definition/batch" : {
+      "post" : {
+        "tags" : [ "Product" ],
+        "summary" : "Search products",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "data",
+          "description" : "Product part numbers",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Batch"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Product"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    },
+    "/product-definition/{part-number}" : {
+      "get" : {
+        "tags" : [ "Product" ],
+        "summary" : "Find product by ID",
+        "description" : "Returns a single product",
+        "operationId" : "getProductById",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "part-number",
+          "in" : "path",
+          "description" : "ID of pet to return",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Product"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "api_key" : {
+      "type" : "apiKey",
+      "name" : "api_key",
+      "in" : "header"
+    }
+  },
+  "definitions" : {
+    "Batch" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Pair"
+      }
+    },
+    "Pair" : {
+      "type" : "object",
+      "required" : [ "productId" ],
+      "properties" : {
+        "productId" : {
+          "type" : "string"
+        },
+        "rootProductId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Product" : {
+      "type" : "object",
+      "required" : [ "id", "rootProductId" ],
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "rootProductId" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string",
+          "example" : "Mobile Plan"
+        },
+        "displayName" : {
+          "type" : "string",
+          "example" : "Mobile Plan"
+        },
+        "description" : {
+          "type" : "string",
+          "example" : "Mobile Plan"
+        },
+        "tandcLink" : {
+          "type" : "string",
+          "example" : "https://www.telstra.com"
+        },
+        "marketStartDate" : {
+          "type" : "string",
+          "example" : "1478774714195"
+        },
+        "marketEndDate" : {
+          "type" : "string",
+          "example" : "1478774714195"
+        },
+        "domain" : {
+          "type" : "string",
+          "example" : "MOBILE"
+        },
+        "category" : {
+          "type" : "string",
+          "example" : "POSTPAID_MOBILE"
+        },
+        "type" : {
+          "type" : "string",
+          "example" : "PLAN"
+        },
+        "subType" : {
+          "type" : "string",
+          "example" : "MAIN_PLAN"
+        },
+        "offer" : {
+          "type" : "string",
+          "example" : "MAIN_PLAN"
+        },
+        "paymentType" : {
+          "type" : "string",
+          "example" : "MAIN_PLAN"
+        },
+        "contractType" : {
+          "type" : "string",
+          "example" : "MRO"
+        },
+        "constructType" : {
+          "type" : "string",
+          "example" : "MOC"
+        },
+        "technologyType" : {
+          "type" : "string",
+          "example" : "FTTP"
+        },
+        "orderLevel" : {
+          "type" : "string",
+          "example" : "MOLI"
+        },
+        "channels" : {
+          "type" : "string",
+          "example" : "ONLNIE"
+        },
+        "visibility" : {
+          "type" : "string",
+          "example" : "HIDDEN"
+        },
+        "feature" : {
+          "$ref" : "#/definitions/Product_feature"
+        },
+        "price" : {
+          "$ref" : "#/definitions/Product_price"
+        },
+        "domesticAllowance" : {
+          "$ref" : "#/definitions/Allowance"
+        },
+        "roamingAllowance" : {
+          "$ref" : "#/definitions/Allowance"
+        },
+        "array" : {
+          "type" : "array",
+          "xml" : {
+            "name" : "tag",
+            "wrapped" : true
+          },
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "status" : {
+          "type" : "string",
+          "description" : "pet status in the store",
+          "enum" : [ "available", "pending", "sold" ]
+        }
+      },
+      "example" : {
+        "constructType" : "MOC",
+        "roamingAllowance" : {
+          "voice" : {
+            "unit" : "unit",
+            "allowance" : 5,
+            "type" : "type"
+          },
+          "mms" : {
+            "unit" : "unit",
+            "allowance" : 5,
+            "type" : "type"
+          },
+          "data" : {
+            "unit" : "unit",
+            "allowance" : 5,
+            "type" : "type"
+          },
+          "sms" : {
+            "unit" : "unit",
+            "allowance" : 5,
+            "type" : "type"
+          },
+          "type" : "type",
+          "excessTreatment" : "excessTreatment"
+        },
+        "marketStartDate" : "1478774714195",
+        "displayName" : "Mobile Plan",
+        "contractType" : "MRO",
+        "tandcLink" : "https://www.telstra.com",
+        "technologyType" : "FTTP",
+        "description" : "Mobile Plan",
+        "type" : "PLAN",
+        "paymentType" : "MAIN_PLAN",
+        "offer" : "MAIN_PLAN",
+        "feature" : {
+          "sendInOrderFlag" : true,
+          "shareable" : true,
+          "deliveryAddressRequired" : true,
+          "minQuantity" : 6,
+          "maxQuantity" : 0,
+          "appointmentRequired" : true,
+          "creditAssessmentRequired" : true,
+          "serviceQualificationRequired" : true,
+          "shapeable" : true,
+          "defaultQuantity" : 1,
+          "serviceAccountRequired" : true
+        },
+        "orderLevel" : "MOLI",
+        "array" : [ "array", "array" ],
+        "price" : {
+          "installPrice" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          },
+          "discountInstallPrice" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          },
+          "totalPrice" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          },
+          "promotionDiscountPrice" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          },
+          "equipmentPrice" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          },
+          "cancellationFee" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          },
+          "discountTotalPrice" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          },
+          "postPromotionDiscountPrice" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          },
+          "discountEquipmentPrice" : {
+            "unit" : "unit",
+            "price" : 5,
+            "frequency" : "frequency"
+          }
+        },
+        "id" : "id",
+        "marketEndDate" : "1478774714195",
+        "domesticAllowance" : {
+          "voice" : {
+            "unit" : "unit",
+            "allowance" : 5,
+            "type" : "type"
+          },
+          "mms" : {
+            "unit" : "unit",
+            "allowance" : 5,
+            "type" : "type"
+          },
+          "data" : {
+            "unit" : "unit",
+            "allowance" : 5,
+            "type" : "type"
+          },
+          "sms" : {
+            "unit" : "unit",
+            "allowance" : 5,
+            "type" : "type"
+          },
+          "type" : "type",
+          "excessTreatment" : "excessTreatment"
+        },
+        "visibility" : "HIDDEN",
+        "channels" : "ONLNIE",
+        "domain" : "MOBILE",
+        "rootProductId" : "rootProductId",
+        "name" : "Mobile Plan",
+        "subType" : "MAIN_PLAN",
+        "category" : "POSTPAID_MOBILE",
+        "status" : "available"
+      },
+      "xml" : {
+        "name" : "Product"
+      }
+    },
+    "Price" : {
+      "type" : "object",
+      "properties" : {
+        "price" : {
+          "type" : "integer"
+        },
+        "unit" : {
+          "type" : "string"
+        },
+        "frequency" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "unit" : "unit",
+        "price" : 5,
+        "frequency" : "frequency"
+      }
+    },
+    "Allowance" : {
+      "type" : "object",
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        },
+        "excessTreatment" : {
+          "type" : "string"
+        },
+        "sms" : {
+          "$ref" : "#/definitions/UnitAllowance"
+        },
+        "mms" : {
+          "$ref" : "#/definitions/UnitAllowance"
+        },
+        "voice" : {
+          "$ref" : "#/definitions/UnitAllowance"
+        },
+        "data" : {
+          "$ref" : "#/definitions/UnitAllowance"
+        }
+      },
+      "example" : {
+        "voice" : {
+          "unit" : "unit",
+          "allowance" : 5,
+          "type" : "type"
+        },
+        "mms" : {
+          "unit" : "unit",
+          "allowance" : 5,
+          "type" : "type"
+        },
+        "data" : {
+          "unit" : "unit",
+          "allowance" : 5,
+          "type" : "type"
+        },
+        "sms" : {
+          "unit" : "unit",
+          "allowance" : 5,
+          "type" : "type"
+        },
+        "type" : "type",
+        "excessTreatment" : "excessTreatment"
+      }
+    },
+    "UnitAllowance" : {
+      "type" : "object",
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        },
+        "allowance" : {
+          "type" : "integer"
+        },
+        "unit" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "unit" : "unit",
+        "allowance" : 5,
+        "type" : "type"
+      }
+    },
+    "ApiResponse" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Product_feature" : {
+      "properties" : {
+        "appointmentRequired" : {
+          "type" : "boolean"
+        },
+        "creditAssessmentRequired" : {
+          "type" : "boolean"
+        },
+        "deliveryAddressRequired" : {
+          "type" : "boolean"
+        },
+        "serviceAccountRequired" : {
+          "type" : "boolean"
+        },
+        "serviceQualificationRequired" : {
+          "type" : "boolean"
+        },
+        "sendInOrderFlag" : {
+          "type" : "boolean"
+        },
+        "shareable" : {
+          "type" : "boolean"
+        },
+        "shapeable" : {
+          "type" : "boolean"
+        },
+        "maxQuantity" : {
+          "type" : "integer"
+        },
+        "minQuantity" : {
+          "type" : "integer"
+        },
+        "defaultQuantity" : {
+          "type" : "integer"
+        }
+      },
+      "example" : {
+        "sendInOrderFlag" : true,
+        "shareable" : true,
+        "deliveryAddressRequired" : true,
+        "minQuantity" : 6,
+        "maxQuantity" : 0,
+        "appointmentRequired" : true,
+        "creditAssessmentRequired" : true,
+        "serviceQualificationRequired" : true,
+        "shapeable" : true,
+        "defaultQuantity" : 1,
+        "serviceAccountRequired" : true
+      }
+    },
+    "Product_price" : {
+      "properties" : {
+        "equipmentPrice" : {
+          "$ref" : "#/definitions/Price"
+        },
+        "installPrice" : {
+          "$ref" : "#/definitions/Price"
+        },
+        "totalPrice" : {
+          "$ref" : "#/definitions/Price"
+        },
+        "cancellationFee" : {
+          "$ref" : "#/definitions/Price"
+        },
+        "discountEquipmentPrice" : {
+          "$ref" : "#/definitions/Price"
+        },
+        "discountInstallPrice" : {
+          "$ref" : "#/definitions/Price"
+        },
+        "discountTotalPrice" : {
+          "$ref" : "#/definitions/Price"
+        },
+        "promotionDiscountPrice" : {
+          "$ref" : "#/definitions/Price"
+        },
+        "postPromotionDiscountPrice" : {
+          "$ref" : "#/definitions/Price"
+        }
+      },
+      "example" : {
+        "installPrice" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        },
+        "discountInstallPrice" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        },
+        "totalPrice" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        },
+        "promotionDiscountPrice" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        },
+        "equipmentPrice" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        },
+        "cancellationFee" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        },
+        "discountTotalPrice" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        },
+        "postPromotionDiscountPrice" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        },
+        "discountEquipmentPrice" : {
+          "unit" : "unit",
+          "price" : 5,
+          "frequency" : "frequency"
+        }
+      }
+    }
+  }
+}</con:content><con:type>https://swagger.io/swagger2/specification</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://virtserver.swaggerhub.com</con:endpoint><con:endpoint>https://virtserver.swaggerhub.com</con:endpoint></con:endpoints></con:interface>
